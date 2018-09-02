@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="import" href="design_layout_menu.html">
+    <title>Магазины</title>
+</head>
+<body>
+	<div id="menuHolder"> <!-- Replace with include(); --> </div>
+  <script>
+    var link = document.querySelector('link[rel="import"]');
+	// Replace with include();
+    // Clone the <template> in the import.
+    var template = link.import.querySelector('template');
+    var clone = document.importNode(template.content, true);
+
+    document.querySelector('#menuHolder').appendChild(clone);
+  </script>
+
+<div class="content" style="font-size: 18pt; width: 60%; padding-left: 20%;">
+	Одежду Olga Sharkovich можно купить в магазине российских дизайнеров FreedomStore Concept <a href="https://vk.com/freedomstore_ru">vk.com/freedomstore_ru</a>
+	
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?139"></script>
+
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, width: "800", height: "600"}, 103596668);
+</script>
+</div>
+
+<div class="footer">
+	<div>
+		2016@wladbelsky
+	</div>
+  
+</body>
+</html>
+
+</body>
+</html>

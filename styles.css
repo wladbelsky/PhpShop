@@ -1,0 +1,294 @@
+body {
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+	width: 100%;
+	height:  100%;
+}
+
+/*html, body {
+  height: 100%;
+  overflow: hidden;
+}*/
+
+.content {
+    width: calc(100% - 10px);
+    background-color: white;
+    text-align: center;
+	margin: 0 5px;
+	display:inline-block; /* TEST */
+	margin-bottom: 30px;
+	
+	/* footer_short */
+	  position: relative;
+  min-height: 100%;
+  height:100%;
+}
+
+.footer {
+ 	padding: 0;
+    color: white;
+    width: 100%;
+    height: 40px;
+	background:#595959;
+	position: relative;
+	margin-top: -30px; /* отрицательное значение высоты футера */
+	clear:both;
+}
+
+/* Fix this MESS!!! 
+   It looks terrible!
+   Think about adaptive layout!!! 
+*/
+#footer_short {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /*position:relative;*/
+}
+/* END OF FIX AREA */
+.footer div {
+	padding:10px;
+}
+
+.itemFrame{
+    width:150px;
+    height: 250px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#previewHolder {
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#previewHolder div {
+    width: 50%;
+    border: 1px solid black;
+}
+
+#itemDetails {
+    line-height: 5px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#contentHolder {
+    display: inline-block;
+	margin: 5px 0;
+}
+
+.cartTable {
+    border: solid black 1px;
+    width: 100%;
+}
+
+.cartTable tr, .cartTable td {
+    border: solid black 1px;
+}
+
+.popUpWindow
+{
+    position: fixed;
+    left:25%;
+    top:25%;
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
+    background: white;
+    text-align: center;
+    -webkit-transition: width 2s;
+    transition: width 2s;
+}
+/* Addresses */
+#locationField {
+    width: 80%;
+    padding-left: 5px;
+}
+
+#address {
+    /*border: solid black 1px;*/
+    width: 100%;
+    padding: 5px;
+}
+
+#address tr, #address td {
+    border: solid black 1px;
+}
+
+.field {
+    width: 80%;
+    position: relative;
+}
+/* NavBar */
+#nav {
+    float: left;
+    width: 100%;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+#nav li {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    display: block;
+}
+
+#nav li a {
+    display: block;
+    background: rgba(89,89,89,0.60); /* #595959 */
+	border-radius:2px;
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+#nav ul {
+    list-style: none;
+    position: absolute;
+    left: -10000px;
+    opacity: 0;
+    -webkit-transition:0.25s linear opacity;
+}
+
+#nav ul li {
+    padding-top: 1px;
+    float: none;
+}
+
+#nav ul a {
+    white-space: nowrap;
+    display: block;
+    color: white;
+    background: #808080;
+}
+
+#nav li:hover ul {
+    left: -40px;
+    opacity: 1;
+}
+/* TopBar */
+#menu {
+    width: 70%;
+    position: absolute;
+    top: 80px;
+}
+
+#menuHolder {
+	z-index:1;
+    width: 100%;
+	position: relative;
+    height: 140px;
+    background-color: #1F1F1F;
+    /*background-image: url("/img/batman-logo-big.gif");*/
+    background-position-x: 10px;
+    background-position-y: 5px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+}
+
+#topBar { /* ex CartView */
+    width: 100%;
+    height: 80px;
+    position: relative;
+    background-color: #FFFFFF;
+	text-align:right;
+	text-align:center; /* TEST */
+	line-height:80px; /* TEST */
+}
+
+.topElement {
+	height:100%;
+	float: right; 
+	background: #595959;
+	width: 200px;
+	text-align: center;
+	margin-left: 5px;
+	position: relative;	
+	
+	color: #FFFFFF;
+}
+
+/* glare TESTs */
+/*.topElement:before,*/ #menuHolder:before {
+	content:"";
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, .15)), to(rgba(0, 0, 0, .25))), -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(0.5, rgba(255, 255, 255, .1)), color-stop(0.501, rgba(255, 255, 255, 0)), color-stop(1, rgba(255, 255, 255, 0)));
+background: -moz-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+}
+
+/*.topElement:hover {
+	transition:all 1s;
+	background:#DCDCDC;
+}*/
+
+.topElement div {
+	line-height: 5px;
+	text-align:right;
+	display:inline-block;
+	float:right; /* TEST */
+	widows:100%;
+	max-height: 80px;
+	margin-right: 10px;
+	/* background:#FF0004; */
+}
+
+#logo {
+	height: 100%;
+	display:inline-block;
+	float:left;
+}
+
+/* Blocks */
+
+.blockHolder {
+	position: relative;
+	height: 100%;
+    float: left;
+	display: inline-block;
+	z-index:0;
+	margin: 0 5px 0 2.5px;
+}
+
+.block {
+	width: 100%;
+/*	display: block;*/
+	position: relative;
+	background-repeat: no-repeat;
+	background-size:cover;
+	margin: 5px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	
+	box-shadow: 0 0 5px rgba(0,0,0,1);
+	-webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.block:hover {
+	width: calc(100% + 5px);
+	height: calc(100% + 5px);
+	box-shadow: 0 0 10px rgba(149,149,149,1.00);
+	-webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.block * {
+	color:#FFFFFF;
+	font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; 
+    /*background-color:#000000;*/ 
+	padding: 0 20px; 
+	/*box-shadow: 0 0 15px rgba(165,165,165,0.90);*/
+	text-shadow: 0 0 5px rgba(128,128,128,0.90);
+	
+}
